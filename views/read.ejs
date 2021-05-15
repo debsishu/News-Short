@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/Images/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+      integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/CSS/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/27ef16d886.js"
+      crossorigin="anonymous"
+    ></script>
+    <title><%= category.charAt(0).toUpperCase() + category.slice(1) %></title>
+  </head>
+  <body>
+    <nav class="nav-bar" style="background-color: #1a1a2e">
+      <h3>Ns</h3>
+      <div class="right-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#category">Categories</a></li>
+        </ul>
+        <button
+          onclick="window.location.href='mailto:pauldebsishu2002@gmail.com'"
+          class="contact"
+        >
+          Contact Me
+        </button>
+      </div>
+    </nav>
+
+    <div class="news-container">
+      <h2><%= category.charAt(0).toUpperCase() + category.slice(1) %></h2>
+      <% for(var i = 0; i < data.length; i++) { %>
+      <div class="news">
+        <h3 class="news-heading"><%= data[i].news_obj.title %></h3>
+        <div class="image">
+          <img src="<%= data[i].news_obj.image_url %>" alt="" />
+        </div>
+        <p><%= data[i].news_obj.content %></p>
+        <p class="author">Author : <%= data[i].news_obj.author_name %></p>
+        <div class="sources">
+          <p class="source">
+            Source Name : <%= data[i].news_obj.source_name %>
+          </p>
+          <a href="<%= data[i].news_obj.source_url %>" class="source-link"
+            >Visit Source</a
+          >
+        </div>
+      </div>
+      <% } %>
+    </div>
+
+    <div class="buttons">
+      <% if(pageNum > 1) { %>
+      <a href="/categories/<%= category %>/page=<%= pageNum + 1 %>" class="next-btn"
+        >Next Page</a
+      >
+      <% } else { %>
+      <a
+        href="/categories/<%= category %>/page=<%= 2 %>"
+        class="next-btn"
+        >Next Page</a
+      >
+      <% } %>
+    </div>
+
+    <footer class="footer">
+      <div class="social">
+        <a
+          href="https://github.com/debsishu"
+          class="fab fa-github fa-md github"
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/debsishu-pal-96717b19a"
+          class="fab fa-linkedin-in fa-md linkedin"
+        ></a>
+        <a
+          href="https://www.instagram.com/debsishu/"
+          class="fab fa-instagram fa-md instagram"
+        ></a>
+      </div>
+
+      <div class="promt">
+        <h3>Ns</h3>
+      </div>
+    </footer>
+  </body>
+</html>

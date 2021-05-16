@@ -440,3 +440,15 @@ button {
     padding: 3rem;
   }
 }
+
+@media screen and (max-width: 1300px) {
+  .hero-container .left .circle {
+    top: 6.5rem;
+    width: 25rem;
+    height: 25rem;
+  }
+
+  .container .content h1 {
+    font-size: 2.4rem;
+  }
+}

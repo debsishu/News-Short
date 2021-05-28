@@ -6,13 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./Images/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Major+Mono+Display&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./CSS/styles.css" />
@@ -41,21 +36,29 @@
           One Stop Daily News<br />News Articles In Just 60 Words
         </h1>
         <h2 class="stagger hero-h2">Reading News In A New Way</h2>
-        <button class="stagger hero-btn" onclick="window.location.href='#category'">Click to Start Reading</button>
+        <button
+          class="stagger hero-btn"
+          onclick="window.location.href='#category'"
+        >
+          Click to Start Reading
+        </button>
       </div>
     </div>
 
     <div class="card-container" id="category">
       <h1>Please Select Any One From The List</h1>
       <div class="poster-container">
-        <% for(var i = 0; i < data.length; i++) { %> 
-          <div class="cards" onclick="window.location.href = '/categories/<%= data[i].tag %>';">
-            <div class="poster">
-              <img src="<%= data[i].image_url %>" alt="" srcset="">
-              <div class="text"><p><%= data[i].label %> </p></div>
-            </div>
+        <% for(var i = 0; i < data.length; i++) { %>
+        <div
+          class="cards"
+          onclick="window.location.href = '/categories/<%= data[i].tag %>';"
+        >
+          <div class="poster">
+            <img src="<%= data[i].image_url %>" alt="" srcset="" />
+            <div class="text"><p><%= data[i].label %></p></div>
           </div>
-          <% } %> 
+        </div>
+        <% } %>
       </div>
     </div>
 

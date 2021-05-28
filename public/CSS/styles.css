@@ -5,12 +5,11 @@
 }
 
 html {
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Merriweather", serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 nav h3 {
@@ -54,7 +53,7 @@ button {
 .right-nav button {
   outline: none;
   border: none;
-  font-family: "Merriweather", serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: 600;
   font-size: 0.9rem;
   padding: 1rem 2rem;
@@ -79,7 +78,7 @@ button {
 
 .hero-container .left .circle {
   position: absolute;
-  top: 7rem;
+  top: 6rem;
   z-index: -1;
   left: -5rem;
   width: 40rem;
@@ -99,10 +98,10 @@ button {
 
 .container .content h1 {
   color: white;
-  font-family: "Playfair Display", serif;
+  font-family: "DM Sans", sans-serif;
   padding: 6rem 0 1rem 5rem;
   font-weight: 600;
-  font-size: 3.7rem;
+  font-size: 3.5rem;
 }
 
 .container .content h2 {
@@ -116,7 +115,7 @@ button {
   padding: 1.2rem 2.2rem;
   font-weight: 600;
   font-size: 1.1rem;
-  font-family: "Merriweather", serif;
+  font-family: "DM Sans", sans-serif;
   outline: none;
   border: none;
   background-color: #e94560;
@@ -212,6 +211,7 @@ button {
 }
 
 .news-heading {
+  font-size: 1.5rem;
   margin: 1rem 0 1rem 0;
 }
 
@@ -232,6 +232,7 @@ button {
   text-align: left;
   margin-bottom: 2rem;
   line-height: 2rem;
+  font-size: 1.2rem;
 }
 
 .author {
@@ -249,7 +250,8 @@ button {
   color: white;
   background-color: #e94560;
   padding: 0.8rem 2rem;
-  border-radius: 0.4rem;
+  font-weight: bold;
+  border-radius: 0.2rem;
 }
 
 .buttons {
@@ -260,7 +262,7 @@ button {
 }
 
 .buttons a {
-  font-family: "Merriweather", serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 1rem;
   text-decoration: none;
   outline: none;
@@ -318,11 +320,6 @@ button {
 }
 
 @media screen and (max-width: 550px) {
-  *,
-  html {
-    overflow-x: none;
-  }
-
   .hero-container .left .circle {
     width: 25rem;
     height: 25rem;
